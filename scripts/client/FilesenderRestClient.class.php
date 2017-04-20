@@ -35,7 +35,7 @@
  */
 class FilesenderRestClient {
     /**
-     * Base url to Filesender's rest service
+     * Base url to Filesender's REST service
      */
     private $base_url = null;
     
@@ -67,7 +67,7 @@ class FilesenderRestClient {
     /**
      * Constructor
      * 
-     * @param string $base_url base url to Filesender's rest service
+     * @param string $base_url base url to Filesender's REST service
      * @param string $mode authentication mode, "application" or "user"
      * @param string $application_or_uid the application name or user uid
      * @param string $secret signing secret
@@ -84,7 +84,7 @@ class FilesenderRestClient {
     /**
      * Flatten arguments (recursive)
      * 
-     * @param $a array multi-dimensionnal array
+     * @param $a array multi-dimensional array
      * @param $p string parent key stack
      * 
      * @return array single dimension array
@@ -231,7 +231,7 @@ class FilesenderRestClient {
     /**
      * Make a GET request
      * 
-     * @param string $path path to make the request to (under the rest service)
+     * @param string $path path to make the request to (under the REST service)
      * @param array $args GET arguments
      * 
      * @return mixed the response
@@ -243,7 +243,7 @@ class FilesenderRestClient {
     /**
      * Make a POST request
      * 
-     * @param string $path path to make the request to (under the rest service)
+     * @param string $path path to make the request to (under the REST service)
      * @param array $args GET arguments
      * @param mixed $content request body
      * 
@@ -256,7 +256,7 @@ class FilesenderRestClient {
     /**
      * Make a PUT request
      * 
-     * @param string $path path to make the request to (under the rest service)
+     * @param string $path path to make the request to (under the REST service)
      * @param array $args GET arguments
      * @param mixed $content request body
      * 
@@ -269,7 +269,7 @@ class FilesenderRestClient {
     /**
      * Make a DELETE request
      * 
-     * @param string $path path to make the request to (under the rest service)
+     * @param string $path path to make the request to (under the REST service)
      * @param array $args GET arguments
      * 
      * @return mixed the response
@@ -292,9 +292,9 @@ class FilesenderRestClient {
      * @param string $from sender email
      * @param array $files array of file arrays with name and size entries
      * @param array $recipients array of recipients addresses
-     * @param string $subject optionnal subject
-     * @param string $message optionnal message
-     * @param string $expires expiry date (yyyy-mm-dd or unix timestamp)
+     * @param string $subject optional subject
+     * @param string $message optional message
+     * @param string $expires expiry date (yyyy-mm-dd or Unix timestamp)
      * @param array $options array of selected option identifiers
      */
     public function postTransfer($user_id, $from, $files, $recipients, $subject = null, $message = null, $expires = null, $options = array()) {
@@ -397,9 +397,9 @@ class FilesenderRestClient {
      * @param string $from sender email
      * @param mixed $files file path or array of files path
      * @param array $recipients array of recipients addresses
-     * @param string $subject optionnal subject
-     * @param string $message optionnal message
-     * @param string $expires expiry date (yyyy-mm-dd or unix timestamp)
+     * @param string $subject optional subject
+     * @param string $message optional message
+     * @param string $expires expiry date (yyyy-mm-dd or Unix timestamp)
      * @param array $options array of selected option identifiers
      */
     public function sendFiles($user_id, $from, $filespath, $recipients, $subject = null, $message = null, $expires = null, $options = array()) {
